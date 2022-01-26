@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Sample Portfolio</title>
+        <link rel="stylesheet" href="portfolio.css">
+        <body>
+            <div class="toggle" onclick="toggleMenu();"></div>
+
+            <section class="banner" id="home">
+
+                <div class="imgSidebar">
+                    <img src="pic3.jpg">
+                </div>
+                <div class="contentBox">
+                    <h5 class="logotxt">Sample Portfolio</h5>
+                    <div>
+                        <h4><span>Hello</span>, I'm</h4>
+                        <h2>Jason R. Lim</h2>
+                        <h4>I'm a student currently studying web development</h4>
+                        <p>I'm current studying at STI College Caloocan to learn more about IT (Information Technology).</p>
+                        <a href="#" class="btn">About</a>
+                    </div>
+                    <ul class="social">
+                        <li><a href="#"><img src="facebook.png"></a></li>
+                        <li><a href="#"><img src="twitter.png"></a></li>
+                    </ul>
+                </div>  
+            </section>
+
+            <section class="about" id="about">
+                <div class="title white">
+                    <h2>About Me</h2>
+                    <p>Some Information About Myself</p>
+                </div>
+                <div class="content">
+                    <div class="textBox">
+                        <p>I mostly do designing from time to time depending on the time available. As I'm learning more and more on design and development, one thing I've learned
+                            is that it is not easy but a fun challenge since anything can happen when I am doing something.<br><br> I rarely edit but that's a different story for 
+                            photo editing since I've taken quite an interest when it comes to images and how can it be manipulated by any means necessary.<br><br> 
+                            One last thing you need to know about me is that I will try if I said so than doing almost to minimal action on it.
+                        </p>
+                    </div>
+                    <div class="imageBox">
+                        <img src="pic.jpg">
+                    </div>
+                </div>
+            </section>
+
+            <section class="services" id="services">
+                <div class="title">
+                    <h2>About Services</h2>
+                    <p>This section tells about what are the things I can do.</p>
+                </div>
+                <div class="content">
+                    <div class="serviceBox">
+                        <img src="icon1.png">
+                        <h2>Web Design</h2>
+                        <p>Web Design has always been a first thing I like to do in my heart because you can experiment on what kind of website you will made. This also includes styles,
+                            positioning, texts, images, and other desgin related items.
+                        </p>
+                    </div>
+                    <div class="serviceBox">
+                        <img src="icon2.png">
+                        <h2>Graphics Design</h2>
+                        <p>Sometimes I do visual designs as a means of communication. This design must be as simple or can be at least interpreted as possible because not at first glance
+                            you can tell what it is.
+                        </p>
+                    </div>
+                    <div class="serviceBox">
+                        <img src="icon6.png">
+                        <h2>Video Editing</h2>
+                        <p>As for Video Editing, I very rarely do this since designing is my priority but I can do simple edits here and there. I can do small or big projects depending
+                            on high the demand is.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="work" id="work">
+                <div class="title">
+                    <h2>Recent Works</h2>
+                    <p>These are my recent works for the current term</p>
+                </div>
+                <div class="content">
+                    <div class="workBox">
+                        <div class="imgBox">
+                            <img src="output main.png">
+                         </div>
+                         <div class="txtBox">
+                             <h3>To Do List</h3>
+                         </div>
+                    </div>
+                    <div class="workBox">
+                        <div class="imgBox">
+                            <img src="RelativeLayout.png">
+                         </div>
+                         <div class="txtBox">
+                             <h3>Sample CV on a Mobile Application</h3>
+                         </div>
+                    </div>
+                    <div class="workBox">
+                        <div class="imgBox">
+                            <img src="pairs.png">
+                         </div>
+                         <div class="txtBox">
+                             <h3>Matching game on a Mobile Application</h3>
+                         </div>
+                    </div>
+                    <div class="workBox">
+                        <div class="imgBox">
+                            <img src="reg.png">
+                         </div>
+                         <div class="txtBox">
+                             <h3>Responsive Design Registration Form</h3>
+                         </div>
+                    </div>
+            </section>
+
+            <section class="contact" id="contact">
+                <div class="title white">
+                    <h2>Contact Me</h2>
+                    <p>If you have some concerns, Let me know by sending me your information below.</p>
+                </div>
+                <div class="contactform">
+                    <div class="row">
+                        <div class="col50">
+                            <input type="text" name="" placeholder="First Name">    
+                        </div>
+                        <div class="col50">
+                            <input type="text" name="" placeholder="Last Name">    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col50">
+                            <input type="text" name="" placeholder="Email">   
+                        </div>
+                        <div class="col50">
+                            <input type="text" name="" placeholder="Mobile Number">   
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col100">
+                            <textarea placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col100">
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="bottomtext">
+                <p>Section: BT 703 | 01/26/2022</p>
+            </div>
+
+            <div class="sidebar">
+                <ul class="menu">
+                    <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+                    <li><a href="#about" onclick="toggleMenu();">About</a></li>
+                    <li><a href="#services" onclick="toggleMenu();">Services</a></li>
+                    <li><a href="#work" onclick="toggleMenu();">Work</a></li>
+                    <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+                </ul>
+            </div>
+           
+
+            <script>
+                function toggleMenu(){
+                    const Menutoggle = document.querySelector('.toggle');
+                    const sidebar = document.querySelector('.sidebar');                  
+                    Menutoggle.classList.toggle('active');
+                    sidebar.classList.toggle('active');
+                    
+                }
+            </script>
+
+            
+        </body>
+    </head>
+</html>
+
+
+

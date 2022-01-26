@@ -1,0 +1,495 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+.toggle
+{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #000 url(menu.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.toggle.active
+{
+    background: #000 url(close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section{
+    padding: 100px;
+    min-height: 100vh;
+}
+
+.banner
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.banner .imgSidebar
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 100%;
+}
+
+.banner .imgSidebar .img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .contentBox,
+.sidebar
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 500px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.logotxt{
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #333;
+    color: #fff;
+    padding: 0 5px;
+}
+
+.banner .contentBox h4{
+    font-size: 1.5em;
+    color: #333;
+    font-weight: 300;
+}
+
+.banner .contentBox h4 span{
+    color: cyan;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.banner .contentBox h2{
+    font-size: 3em;
+    color: #333;
+    line-height: 1em;
+}
+
+p{
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 300;
+}
+
+.btn{
+    background: cyan;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.sidebar{
+    position: fixed;
+    background:#000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    padding: 40px;
+    z-index: 100;
+    right: -100%;
+}
+
+.sidebar.active{
+    right: 0;
+}
+
+.sidebar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar ul li{
+    list-style: none;
+}
+
+.sidebar ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    margin: 10px 0;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.sidebar ul li a:hover{
+    color: cyan;
+
+}
+
+.social{
+    position: absolute;
+    left: 100px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li{
+    margin-right: 10px;
+    list-style: none;
+}
+
+.social li img {
+    transform: scale(0.5);
+    opacity: 0.7;
+}
+
+.social li img:hover{
+    opacity: 1;
+}
+
+.title{
+    width: 100%;
+    text-align: center;
+}
+
+.title h2{
+    position: relative;
+    color: cyan;
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.title p{
+    max-width: 700px;
+    display: inline-block;
+
+}
+
+.title h2::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 60px;
+    height: 4px;
+    background: #000;
+}
+
+.title.white h2,
+.title.white p{
+    color: #fff;
+}
+
+.title.white h2::before{
+    background: #fff;
+
+}
+
+.about{
+    background:#000;
+}
+
+.about .content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.about .content .textBox{
+    min-width: 49%;
+    width: 49%;
+
+}
+
+.about .content .textBox p{
+    color: #fff;
+}
+
+.about .content .imageBox{
+    margin-left: 40px;
+}
+
+.about .content .imageBox img{
+    max-width: 100%;
+}
+
+.services .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.services .content .serviceBox{
+    padding: 40px 20px;
+    max-width: 340px;
+    margin: 20px;
+    transition: 0.5s;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.services .content .serviceBox:hover{
+    background: #000;
+}
+
+.services .content .serviceBox img{
+    max-width: 80px;
+    transition: 00.5s;
+}
+
+.services .content .serviceBox:hover img{
+    filter: invert(1);
+}
+
+.services .content .serviceBox h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.services .content .serviceBox:hover h2{
+    color: #fff;
+}
+
+.services .content .serviceBox p{
+    margin: 0;
+    transition: 0.5s;
+}
+
+.services .content .serviceBox:hover p {
+    color: #fff;
+}
+
+.work .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* .work .content .workBox{
+    position: relative;
+    width: 265px;
+    height: 265px;
+    margin: 10px;
+    transition: 0.5s;
+    text-align: center;
+} */
+
+/* .work .content .workBox .imgBox,
+.work .content .workBox .txtBox
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+/* 
+.work .content .workBox .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+.work .content .workBox .txtBox{
+    text-align: center;
+}
+
+.work .content .workBox{
+    align-items: center;
+    justify-content: center;
+}
+
+.contact {
+    background:#000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .contactform{
+    position: relative;
+    width: 700px;
+    margin-top: 20px;
+}
+
+.contact .contactform .row{
+    width: 100%;
+    display: flex;
+}
+
+.contact .contactform .row .col50{
+    width: 50%;
+    margin: 10px;
+    
+}
+
+.contact .contactform .row .col100{
+    width: 50%;
+    margin: 10px;
+    text-align: center;
+}
+
+.contact .contactform .row input,
+.contact .contactform .row textarea
+{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #111;
+    color: #fff;
+    font-size: 16px;
+    resize: none;
+}
+
+.contact .contactform .row textarea{
+    height: 100px;
+}
+
+.contact .contactform .row input[type="submit"]{
+    background: cyan;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    max-width: 150px;
+    
+}
+
+
+.bottomtext{
+    color: #fff;
+    background: #111;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.bottomtext p{
+    margin: 0;
+    font-size: 16px;
+}
+
+@media (max-width: 991px)
+{
+    .banner .imgSidebar{
+        display: none;
+    }
+    .banner .contentBox, .sidebar{
+        width: 100%;
+        padding: 40px;
+    }
+    .logotxt{
+        left: 40px
+    }
+    .toggle{
+        right: 40px;
+    }
+    .social{
+        left: 40px;
+    }
+    section{
+        padding: 40px;
+    }
+    .about .content{
+        flex-direction: column;
+    }
+    .about .content .textBox{
+        min-width: 100%;
+        width: 100%;
+    }
+    .about .content{
+        margin-top: 0;
+    }
+    .about .content .imageBox{
+        margin-left: 0;
+    }
+    .services .content .serviceBox{
+        padding: 30px 20px;
+        max-width: 340px;
+        margin: 10px;
+    }
+    .contact .contactform{
+        width: 100%;
+    }
+    .contactform .row{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contact .contactform .row .col50{
+        width: 100%;
+    }
+
+    .sidebar ul li a{
+        font-size: 1.5em;
+
+    }
+}
+
+@media (max-width: 500px)
+{
+    .services .content .serviceBox,
+    .work .content .workBox
+    {
+        padding: 30px 20px;
+        max-width: 100%;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
